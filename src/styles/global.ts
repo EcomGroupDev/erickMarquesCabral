@@ -7,33 +7,18 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   };
 
-  a{
-    cursor: pointer;
-    text-decoration: none;
-    color: ${(props) => props.theme["white"]};
-  };
-  /* link que foi visitado */
-  a:visited {
-    color: none;
-  };
-  /* mouse over */
-  a:hover {
-    transition: 1s;
-    color: ${(props) => props.theme["yellow-dark"]};
-  };
-  /* link selecionado */
-  a:active {
-    color: ${(props) => props.theme["white"]};
-  };
-
+  html,body {
+    font-size: 10px;
+    line-height: 160%;
+  }
+  
   body {
     background: ${(props) => props.theme['base-background']};
   };
   
-  body, input, textarea, h1  {
+  body, input, textarea, h1, button  {
+    font: 400 1.6rem 'Roboto', sans-serif;
     color: ${(props) => props.theme.white};
-    line-height: 160%;
-    font: 400 1rem 'Roboto', sans-serif;
   };
   body::-webkit-scrollbar {
     width: 12px;
@@ -45,5 +30,29 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 20px;
     background-color: ${(props) => props.theme.white};
     border: 3px solid ${(props) => props.theme['purple-dark']};
+  };
+
+
+  a{
+    cursor: pointer;
+    text-decoration: none;
+    color: ${(props) => props.theme["white"]};
+    padding: 0 0 3px 0;
+    border-bottom: solid 3px transparent;
+  };
+  /* link que foi visitado */
+  a:visited {
+    color: none;
+    border-bottom: solid 3px ${(props) => props.theme["green-100"]};
+  };
+  /* mouse over */
+  a:hover {
+    transition: 1s;
+    border-bottom: solid 3px ${(props) => props.theme["green-100"]};
+  };
+  /* link selecionado */
+  a:active {
+    color: ${(props) => props.theme["white"]};
+    border-bottom: solid 3px ${(props) => props.theme["green-100"]};
   };
 `
