@@ -14,12 +14,28 @@ export const MainContent = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  gap: 32px;
 `;
 
 export const MainHero = styled.div`
+  gap: 32px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+`
+export const MainCourse = styled.div`
   gap: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  border: dashed 3px #9747FF;
+  border-radius: 10px;
+  padding: 12px;
+
+  img{
+    width: 100%;
+  }
 `
