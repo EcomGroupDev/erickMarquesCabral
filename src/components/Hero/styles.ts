@@ -8,6 +8,11 @@ export const HeroContent = styled.div`
   max-width: 1200px;
   align-items: center;
   justify-content: space-between;
+
+  @media(max-width: 1070px){
+    flex-direction: column;
+    gap: 16px;
+  }
 `;
 
 export const HeroTextContainer = styled.div`
