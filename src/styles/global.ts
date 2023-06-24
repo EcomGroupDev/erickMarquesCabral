@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    background: ${(props) => props.theme['base-background']};
+    background: ${(props) => props.theme['purple-light']};
   };
   
   body, input, textarea, h1, button  {
