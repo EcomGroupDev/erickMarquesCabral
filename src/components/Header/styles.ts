@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  height: 100vh;
   background: ${(props) => props.theme['purple-dark']};
   padding: 2rem 0 2rem;
   border-bottom: 6px solid ${(props) => props.theme['green-100']};
+  font-family: 'Poppins';
 `;
 
 export const HeaderContent = styled.div`
@@ -20,25 +20,35 @@ export const HeaderContent = styled.div`
 export const HeaderSection = styled.div`
   width: 100%;
   display: flex;
+  padding: 24px 0;
   flex-direction: row;
   align-items: center;
+  
   justify-content: space-between;
-  padding: 24px 0;
+
+  @media(max-width: 800px){
+    flex-direction: column;
+    gap: 16px;
+  }
 `;
 
 export const Logo = styled.div`
   display: flex;
   flex-direction: row;
-  font-size: 32px;
+
+  h1{
+    font-size: 32px;
+    font-weight: 700;
+  }
 `;
 
 export const Menu = styled.nav`
   width: 300px;
 
   ul{
+    width: auto;
     display: flex;
     flex-direction: row;
-    width: auto;
     justify-content: space-between;
 
     li{

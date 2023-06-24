@@ -30,9 +30,6 @@ export function Header() {
         </HeaderSection>
 
         <Hero />
-        <button>
-            com alguma coisa aqui
-          </button>
       </HeaderContent>
     </HeaderContainer>
   )
