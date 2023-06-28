@@ -1,5 +1,10 @@
-import { HeroButton, HeroContent, HeroTextContainer, HeroTextContent } from "./styles";
-import heroImg from "../../assets/heroImg.svg";
+import heroImg from "../../assets/heroImg.svg"
+import {
+  HeroButton,
+  HeroContent,
+  HeroTextContainer,
+  HeroTextContent
+} from "./styles"
 
 export function Hero() {
   return (
