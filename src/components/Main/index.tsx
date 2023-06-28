@@ -3,7 +3,6 @@ import { Cracha } from "../Cracha";
 import { CardProject, MainContainer, MainContent, MainCourse, MainHero, MainPostProject } from "./styles";
 import courseImg from "../../assets/course.svg"
 import { ButtonCAT } from "../ButtonCTA";
-import postImg from "../../assets/postImg.svg"
 import { api } from "../../lib/axios";
 import { useEffect, useState } from "react";
 import CoffeeDelivery from "../../assets/capas/CoffeeDelivery.svg"
