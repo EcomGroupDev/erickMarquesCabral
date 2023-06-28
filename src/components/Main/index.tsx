@@ -1,11 +1,20 @@
-import { Article } from "../Article";
-import { Cracha } from "../Cracha";
-import { CardProject, MainContainer, MainContent, MainCourse, MainHero, MainPostProject } from "./styles";
-import courseImg from "../../assets/course.svg"
-import { ButtonCAT } from "../ButtonCTA";
-import { api } from "../../lib/axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
+import { ButtonCAT } from "../ButtonCTA"
+import { api } from "../../lib/axios"
+import { Article } from "../Article"
+import { Cracha } from "../Cracha"
+
 import CoffeeDelivery from "../../assets/capas/CoffeeDelivery.svg"
+import courseImg from "../../assets/course.svg"
+import {
+  CardProject,
+  MainContainer,
+  MainContent,
+  MainCourse,
+  MainHero,
+  MainPostProject
+} from "./styles"
+
 type repoprops = {
   id: number,
   description: string,
