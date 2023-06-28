@@ -5,7 +5,7 @@ import { Article } from "../Article"
 import { Cracha } from "../Cracha"
 
 import CoffeeDelivery from "../../assets/capas/CoffeeDelivery.svg"
-import courseImg from "../../assets/course.svg"
+
 import {
   CardProject,
   MainContainer,
@@ -48,7 +48,7 @@ export function Main() {
         </MainHero>
 
         <MainCourse>
-          <img src={courseImg} />
+          
           <ButtonCAT
             text="Entre em contato pelo whatsapp"
           />
