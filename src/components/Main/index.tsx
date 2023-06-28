@@ -3,7 +3,7 @@ import { ButtonCAT } from "../ButtonCTA"
 import { api } from "../../lib/axios"
 import { Article } from "../Article"
 import { Cracha } from "../Cracha"
-import courseImg from "../../assets/course.svg"
+import cursos from "../../assets/cursos.svg"
 import CoffeeDelivery from "../../assets/capas/CoffeeDelivery.svg"
 
 import {
@@ -48,7 +48,7 @@ export function Main() {
         </MainHero>
 
         <MainCourse>
-          <img src={courseImg } alt="imagem de cursos"/>
+          <img src={cursos} alt="imagem de cursos" />
           <ButtonCAT
             text="Entre em contato pelo whatsapp"
           />
