@@ -1,10 +1,36 @@
 import { Article } from "../Article";
 import { Cracha } from "../Cracha";
-import { MainContainer, MainContent, MainCourse, MainHero } from "./styles";
-import courseImg from "../../assets/Course.svg"
+import { CardProject, MainContainer, MainContent, MainCourse, MainHero, MainPostProject } from "./styles";
+import courseImg from "../../assets/course.svg"
 import { ButtonCAT } from "../ButtonCTA";
-
+import postImg from "../../assets/postImg.svg"
+import { api } from "../../lib/axios";
+import { useEffect, useState } from "react";
+import CoffeeDelivery from "../../assets/capas/CoffeeDelivery.svg"
+type repoprops = {
+  id: number,
+  description: string,
+  name: string,
+  created_at: string,
+}
 export function Main() {
+
+  const [repo, setRepo] = useState<repoprops[]>([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await api.get('/users/erickmarquesc/repos');
+        setRepo(response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <MainContainer>
       <MainContent>
@@ -19,6 +45,28 @@ export function Main() {
             text="Entre em contato pelo whatsapp"
           />
         </MainCourse>
+
+        <MainPostProject>
+          {repo.map((projecto) => (
+            projecto.name === 'CoffeeDelivery' ||
+              projecto.name === "Calculator" ||
+              projecto.name === "IgniteCall" ||
+              projecto.name === 'DevLinks' ||
+              projecto.name === "IgniteFeed" ||
+              projecto.name === "TaskList-to.do"
+              ? (
+                <CardProject key={projecto.id}>
+                  <img src={CoffeeDelivery} />
+                  <strong>{projecto.created_at}</strong>
+                  <h1>{projecto.name}</h1>
+                  <p>{projecto.description}</p>
+                </CardProject>
+              ) : null
+          ))}
+        </MainPostProject>
+
+
+
       </MainContent>
     </MainContainer>
   )
