@@ -53,6 +53,7 @@ export const CardProject = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  
 
   img{
     border-radius: 8px;
@@ -63,19 +64,59 @@ export const CardProject = styled.div`
     color: #000;
     font-size: 1.6rem;
     font-family: Roboto;
+    padding: 0 12px;
+
   }
+  
   h1{
     color: #290742;
     font-size: 2.4rem;
     font-family: Roboto;
     font-weight: 700;
     line-height: 3.6rem;
+    border-left: solid 5px #9747FF;
+    padding: 0 10px;
   }
+
+  .h1effect {
+    position: relative;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  .h1effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #9747FF;
+    transition: width 1s ease;
+    z-index: -1;
+  }
+
+  .h1effect:hover::before {
+    width: 100%;
+  }
+
+  .h1effect:hover {
+    color: #ffffff; /* Define a cor do texto durante o hover */
+  }
+
+
+
+
+
+
+
+
   p{
     color: #000;
     font-size: 1.6rem;
     font-family: Roboto;
     line-height: 2.4rem;
     text-align: justify;
+    padding: 0 12px;
   }
 `
