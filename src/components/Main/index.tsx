@@ -10,6 +10,7 @@ import DevLinks from "../../assets/capas/DevLinks.svg"
 import IgniteFeed from "../../assets/capas/IgniteFeed.svg"
 import IgniteCall from "../../assets/capas/IgniteCall.svg"
 import TaskListtodo from "../../assets/capas/TaskListtodo.svg"
+import { format } from "date-fns"
 
 import {
   CardProject,
@@ -19,6 +20,7 @@ import {
   MainHero,
   MainPostProject
 } from "./styles"
+import ptBR from "date-fns/locale/pt-BR"
 
 type repoProps = {
   id: number,
@@ -31,6 +33,7 @@ type repoProps = {
 export function Main() {
 
   const [repo, setRepo] = useState<repoProps[]>([])
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -44,6 +47,13 @@ export function Main() {
 
     fetchData();
   }, []);
+
+  const publishedDateFormatted = (date: string) => {
+    const formattedDate = format(new Date(date), "LLLL 'de' yyyy", {
+      locale: ptBR,
+    })
+    return formattedDate
+  }
 
   return (
     <MainContainer>
@@ -84,16 +94,16 @@ export function Main() {
                               ? < img src={TaskListtodo} alt="imagem do projeto TaskListtodo" />
                               : null
                   }
-                  <strong>{projecto.created_at}</strong>
+                  <strong>Publicado em {publishedDateFormatted(projecto.created_at)}</strong>
                   <h1 className="h1effect">{projecto.name}</h1>
                   <p>{projecto.description}</p>
                 </CardProject>
               ) : null
           ))}
+          <ButtonCAT
+            text="Veja outros projetos no meu github"
+          />
         </MainPostProject>
-
-
-
       </MainContent>
     </MainContainer>
   )
