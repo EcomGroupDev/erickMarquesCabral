@@ -28,17 +28,12 @@ export const FooterContainer = styled.div`
   
   align-items: center;
   justify-content: center;
-
-  @media(max-width: 1070px){
-    flex-direction: column;
-  }
-  
   
   img {
     width: 50%;
 
     @media(max-width: 1070px){
-    width: 100%;
+    width: 30%;
     }
 
     @media(max-width: 500px){
@@ -48,18 +43,17 @@ export const FooterContainer = styled.div`
   `;
 
 export const FooterTextContainer = styled.div`
+  gap: 32px;
   display: flex;
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1.5rem;
   flex-direction: column;
-  gap: 32px;
 
   a{
     width: 53%;
   }
 
   p {
+    min-width: 500px;
     font-size: 3.8rem;
     line-height: 46px;
     color: #000;
@@ -92,6 +86,7 @@ export const FooterTextContainer = styled.div`
 export const FooterContainerBottom = styled.div`
   height: auto;
   padding: 2rem 0 2rem;
+  
   
 `;
 
