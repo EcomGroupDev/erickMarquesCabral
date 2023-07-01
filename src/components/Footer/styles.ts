@@ -4,6 +4,8 @@ import backgroundImg from "../../assets/backgraund.svg";
 export const FooterMain = styled.footer`
   display: flex;
   flex-direction: column;
+  padding: 2px 0;
+  gap: 12px;
 `;
 
 export const FooterContent = styled.div`
@@ -96,13 +98,17 @@ export const FooterTextContainer = styled.div`
 `;
 
 export const FooterContainerBottom = styled.div`
-  height: auto;
-  padding: 2rem 0 2rem;
-  
-  
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  justify-content: space-between;
 `;
 
 export const FooterContentBottom = styled.div`
+  gap: 26px;
   width: 100%;
   display: flex;
   margin: 0 auto;
@@ -113,26 +119,30 @@ export const FooterContentBottom = styled.div`
   color: #000;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   @media(max-width: 1070px){
     flex-direction: column;
   }
 
+  section{
+    color: gray;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
   div{
-    width: 450px;
+
+    width: 100%;
     text-align: justify;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 32px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-    section{
-      color: gray;
-      font-size: 1.2rem;
-    }
-
-    h1{
-      color: #000;
+    P{
+      max-width: 450px;
     }
   }
 `;
