@@ -1,14 +1,13 @@
 import { Hero } from "../Hero";
-import { HeaderContainer, HeaderContent, HeaderSection, Logo, Menu } from "./styles";
+import { Logo } from "../Logo";
+import { HeaderContainer, HeaderContent, HeaderSection, Menu } from "./styles";
 
 export function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
         <HeaderSection>
-          <Logo>
-            <h1>ERICK MARQUES</h1>
-          </Logo>
+          <Logo/>
 
           <Menu>
             <ul>
