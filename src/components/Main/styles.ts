@@ -23,10 +23,6 @@ export const MainHero = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  @media(max-width: 1070px){
-    flex-direction: column;
-  }
 `
 export const MainCourse = styled.div`
   gap: 32px;
@@ -50,6 +46,7 @@ export const MainPostProject = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
 
   a{
     border: none;
@@ -65,11 +62,12 @@ export const CardProject = styled.div`
   display: flex;
   flex-direction: column;
   font-family: Roboto;
-  
+
   img{
-    width: 370px;
+    width: 100%;
     border-radius: 8px;
   }
+  
 
   strong{
     color: #000;
