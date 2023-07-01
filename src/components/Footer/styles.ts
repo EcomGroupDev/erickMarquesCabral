@@ -10,6 +10,9 @@ export const FooterContent = styled.div`
   background-image: url(${backgroundImg});
   background-size: cover;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 `;
 
 export const FooterContainer = styled.div`
@@ -18,7 +21,6 @@ export const FooterContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  height: 100vh;
   
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -26,10 +28,18 @@ export const FooterContainer = styled.div`
   
   align-items: center;
   justify-content: center;
+
+  @media(max-width: 1070px){
+    flex-direction: column;
+  }
   
   
   img {
     width: 50%;
+
+    @media(max-width: 1070px){
+    width: 100%;
+  }
   }
   `;
 
