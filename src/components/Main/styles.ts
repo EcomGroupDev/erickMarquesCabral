@@ -23,6 +23,10 @@ export const MainHero = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  @media(max-width: 1070px){
+    flex-direction: column;
+  }
 `
 export const MainCourse = styled.div`
   gap: 32px;
