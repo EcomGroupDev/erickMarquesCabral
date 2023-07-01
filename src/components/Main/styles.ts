@@ -41,82 +41,83 @@ export const MainCourse = styled.div`
 `
 
 export const MainPostProject = styled.div`
+  gap: 12px;
   width: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: row;
+
+  a{
+    border: none;
+    :hover{
+      border: none;
+    }
+  }
 `
 
 export const CardProject = styled.div`
+  gap: 8px;
   width: 370px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  font-family: Roboto;
   
-
   img{
-    border-radius: 8px;
     width: 370px;
+    border-radius: 8px;
   }
 
   strong{
     color: #000;
-    font-size: 1.6rem;
-    font-family: Roboto;
     padding: 0 12px;
-
+    font-size: 1.6rem;
   }
   
   h1{
     color: #290742;
-    font-size: 2.4rem;
-    font-family: Roboto;
+    padding: 0 10px;
     font-weight: 700;
+    font-size: 2.4rem;
     line-height: 3.6rem;
     border-left: solid 5px #9747FF;
-    padding: 0 10px;
   }
 
   .h1effect {
-    position: relative;
-    padding: 10px;
+    transition: color 2s ease;
+
     z-index: 1;
+    padding: 10px;
+    color: #290742;
+    position: relative;
   }
 
   .h1effect::before {
     content: "";
-    position: absolute;
     top: 0;
     left: 0;
     width: 0;
+    z-index: -1;
     height: 100%;
+    position: absolute;
     background-color: #9747FF;
     transition: width 1s ease;
-    z-index: -1;
   }
 
   .h1effect:hover::before {
     width: 100%;
   }
-
+  
   .h1effect:hover {
+    transition: color 1s ease;
     color: #ffffff; /* Define a cor do texto durante o hover */
   }
 
-
-
-
-
-
-
-
   p{
     color: #000;
+    padding: 0 12px;
     font-size: 1.6rem;
     font-family: Roboto;
     line-height: 2.4rem;
     text-align: justify;
-    padding: 0 12px;
   }
 `
