@@ -23,7 +23,7 @@ export function Footer() {
               <strong>
                 +30 PROJETOS
               </strong>
-              Ecom
+              
             </label>
 
             <ButtonCAT
