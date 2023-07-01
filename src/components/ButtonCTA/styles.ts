@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   all: inherit;
-  font-size: 20px;
-  padding: 24px 32px;
-  border-radius: 5px;
-  background-color: #9747FF;
-  font-weight: bolder;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
+
+  font-size: 1.4rem;
+  padding: 20px 22px;
+  border-radius: 5px;
+  font-weight: bolder;
+  background-color: #9747FF;
+  
   :hover{
     filter: brightness(80%);
   }
