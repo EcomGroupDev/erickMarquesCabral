@@ -14,7 +14,7 @@ export const HeroContent = styled.div`
     gap: 16px;
 
     img{
-      width: 80%;
+      width: 100%;
     }
   }
 `;
