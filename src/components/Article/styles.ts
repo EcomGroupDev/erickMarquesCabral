@@ -8,6 +8,10 @@ export const ArticleMainContainer = styled.article`
   margin-top: 75px;
   gap: 32px;
   width: 100%;
+
+  @media(max-width: 1070px){
+    gap: 42px;
+  }
 `
 export const ArticleMainContent = styled.article`
   gap: 12px;
