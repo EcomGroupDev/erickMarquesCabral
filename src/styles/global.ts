@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme["white"]};
     padding: 0 0 3px 0;
     border-bottom: solid 3px transparent;
+    width: auto;
   };
   /* link que foi visitado */
   a:visited {
