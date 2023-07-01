@@ -7,10 +7,11 @@ export const ArticleMainContainer = styled.article`
   justify-content: center;
   margin-top: 75px;
   gap: 32px;
+  width: 100%;
 `
 export const ArticleMainContent = styled.article`
   gap: 12px;
-  width: 471px;
+  max-width: 471px;
   height: 234px;
   display: flex;
   color: #000000;
