@@ -34,13 +34,43 @@ export const FooterContainer = styled.div`
   `;
 
 export const FooterTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 500px;
   justify-content: flex-end;
+  gap: 32px;
+  height: 65%;
+
+  a{
+    width: 46%;
+  }
 
   p {
     font-size: 3.8rem;
     line-height: 46px;
     color: #000;
     font-family: 'Space Grotesk', sans-serif;
+  }
+
+  label{
+    border: solid 2px white;
+    border-radius: 90px;
+    padding: 12px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 350px;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem;
+
+    strong{
+      color: #000;
+    }
+
+    img{
+      width: 24px;
+    }
   }
 `;
