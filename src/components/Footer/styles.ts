@@ -21,6 +21,7 @@ export const FooterTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 26px;
+  padding: 0 4px;
 
   p{
     font-size: 3.8rem;
