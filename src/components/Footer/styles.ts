@@ -32,14 +32,14 @@ export const FooterContainer = styled.div`
 
   gap: 26px;
   
-  img {
+  .ilustration {
     width: 50%;
 
     @media(max-width: 1070px){
     width: 30%;
     }
 
-    @media(max-width: 500px){
+    @media(max-width: 800px){
     display: none;
     }
   }
@@ -57,11 +57,19 @@ export const FooterTextContainer = styled.div`
   }
 
   p {
-    min-width: 500px;
+    min-width: 200px;
     font-size: 3.8rem;
     line-height: 46px;
     color: #000;
     font-family: 'Space Grotesk', sans-serif;
+
+    @media(max-width: 1070px){
+    font-size: 3rem;
+    }
+
+    @media(max-width: 800px){
+    font-size: 2.8rem;
+    }
   }
 
   label{

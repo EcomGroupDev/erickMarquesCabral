@@ -36,7 +36,7 @@ export function Footer() {
 
           </FooterTextContainer>
 
-          <img src={ilustration} />
+          <img src={ilustration} className="ilustration"/>
 
         </FooterContainer>
 
