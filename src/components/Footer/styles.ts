@@ -74,3 +74,53 @@ export const FooterTextContainer = styled.div`
     }
   }
 `;
+
+export const FooterContainerBottom = styled.div`
+  height: auto;
+  padding: 2rem 0 2rem;
+`;
+
+export const FooterContentBottom = styled.div`
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+
+  div{
+    width: 450px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    section{
+      color: gray;
+      font-size: 1.2rem;
+    }
+
+    h1{
+      color: #000;
+    }
+  }
+`;
+
+export const FooterContentBottomLinks = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+    
+  a{
+    all: inherit;
+    color: #000;
+    cursor: pointer;
+  }
+
+  li{
+    color: #000;
+    all: inherit;
+  }
+`
