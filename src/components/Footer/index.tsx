@@ -6,9 +6,9 @@ import ecomIcon from "../../assets/icon/ecom.svg"
 export function Footer() {
   return (
     <FooterMain>
-      <FooterContent>
+      <FooterContent id="contato">
 
-        <FooterContainer>
+        <FooterContainer >
           <FooterTextContainer>
 
             <Logo />
@@ -46,7 +46,7 @@ export function Footer() {
         <FooterContentBottom>
           <div>
             <FooterContentBottomLinks>
-              <a>
+              <a href="#projetos">
                 <li>Projetos em destaque</li>
               </a>
               <a>
@@ -55,7 +55,7 @@ export function Footer() {
               <a>
                 <li>Linkedin</li>
               </a>
-              <a>
+              <a href="#contato">
                 <li>Contato</li>
               </a>
             </FooterContentBottomLinks>

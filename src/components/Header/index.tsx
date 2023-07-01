@@ -12,13 +12,13 @@ export function Header() {
           <Menu>
             <ul>
               <li>
-                <a>Sobre</a>
+                <a href="#sobre">Sobre</a>
               </li>
               <li>
-                <a>Projetos</a>
+                <a href="#projetos">Projetos</a>
               </li>
               <li>
-                <a>Contato</a>
+                <a href="#contato">Contato</a>
               </li>
             </ul>
           </Menu>

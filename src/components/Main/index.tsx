@@ -58,7 +58,7 @@ export function Main() {
   return (
     <MainContainer>
       <MainContent>
-        <MainHero>
+        <MainHero id="sobre">
           <Cracha />
           <Article />
         </MainHero>
@@ -70,7 +70,7 @@ export function Main() {
           />
         </MainCourse>
 
-        <MainPostProject>
+        <MainPostProject id="projetos">
           {repo.map((projecto) => (
             projecto.name === 'CoffeeDelivery' || projecto.name === "Calculator" ||
               projecto.name === "IgniteCall" || projecto.name === 'DevLinks' ||

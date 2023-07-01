@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   html,body {
     font-size: 10px;
     line-height: 160%;
+    scroll-behavior: smooth;
   }
   
   body {
