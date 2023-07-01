@@ -32,16 +32,6 @@ export const HeaderSection = styled.div`
   }
 `;
 
-export const Logo = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  h1{
-    font-size: 32px;
-    font-weight: 700;
-  }
-`;
-
 export const Menu = styled.nav`
   width: 300px;
 
