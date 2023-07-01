@@ -1,6 +1,6 @@
 import { ButtonCAT } from "../ButtonCTA";
 import ilustration from "../../assets/ilustration.svg"
-import { FooterMain, FooterContent, FooterContainer, FooterTextContainer } from "./styles";
+import { FooterMain, FooterContent, FooterContainer, FooterTextContainer, FooterContentBottom, FooterContainerBottom, FooterContentBottomLinks } from "./styles";
 import { Logo } from "../Logo";
 import ecomIcon from "../../assets/icon/ecom.svg"
 export function Footer() {
@@ -23,7 +23,7 @@ export function Footer() {
               <strong>
                 +30 PROJETOS
               </strong>
-                Ecom
+              Ecom
             </label>
 
             <ButtonCAT
@@ -42,9 +42,43 @@ export function Footer() {
 
       </FooterContent>
 
-      {/* <div>
-        <h1>footer real</h1>
-      </div> */}
+      <FooterContainerBottom>
+        <FooterContentBottom>
+          <div>
+            <FooterContentBottomLinks>
+              <a>
+                <li>Projetos em destaque</li>
+              </a>
+              <a>
+                <li>GitHub</li>
+              </a>
+              <a>
+                <li>Linkedin</li>
+              </a>
+              <a>
+                <li>Contato</li>
+              </a>
+            </FooterContentBottomLinks>
+            <section>
+              <p>
+                Erick Marques - Todos os direitos reservados
+              </p>
+              <strong>
+                Projeto Ecom | Erick Marques
+              </strong>
+            </section>
+          </div>
+
+          <div>
+            <p>
+              Ecom é uma organização GitHub criado por Erick Marques para
+              desenvolvimento de projetos web e mobile, costituida por desenvolvedores idependetes
+              promovendo visibilidade e oportunidades dentro do mundo tecnológico.
+            </p>
+
+          </div>
+        </FooterContentBottom>
+      </FooterContainerBottom>
 
     </FooterMain>
   )
