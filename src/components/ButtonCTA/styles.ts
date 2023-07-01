@@ -10,6 +10,9 @@ export const Button = styled.button`
   border-radius: 5px;
   font-weight: bolder;
   background-color: #9747FF;
+  height: auto;
+  width: auto;
+  align-items: center;
   
   :hover{
     filter: brightness(80%);
