@@ -13,21 +13,24 @@ export const FooterContent = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  justify-content: space-between;
 `;
 
 export const FooterContainer = styled.div`
 
-  gap: 26px;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  
   margin: 0 auto;
-  padding: 0 1.5rem;
   max-width: 1200px;
-  
+  padding: 0 1.5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
+  gap: 26px;
   
   img {
     width: 50%;
@@ -47,6 +50,7 @@ export const FooterTextContainer = styled.div`
   display: flex;
   margin: 0 auto;
   flex-direction: column;
+  
 
   a{
     width: 53%;
