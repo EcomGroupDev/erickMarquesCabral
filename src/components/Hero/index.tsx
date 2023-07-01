@@ -28,8 +28,9 @@ export function Hero() {
           Veja mais +
         </HeroButton>
       </HeroTextContainer>
-      
-      <img src={ heroImg} />
+
+      <img src={heroImg} />
+
     </HeroContent>
   )
 }

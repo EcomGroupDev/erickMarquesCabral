@@ -12,6 +12,10 @@ export const HeroContent = styled.div`
   @media(max-width: 1070px){
     flex-direction: column;
     gap: 16px;
+
+    img{
+      width: 80%;
+    }
   }
 `;
 
