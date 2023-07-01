@@ -99,9 +99,6 @@ export function Main() {
                 </a>
               ) : null
           ))}
-          <ButtonCAT
-            text="Veja outros projetos no meu github"
-          />
         </MainPostProject>
       </MainContent>
     </MainContainer>
