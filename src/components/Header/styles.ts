@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   background: ${(props) => props.theme['purple-dark']};
   padding: 2rem 0 2rem;
-  border-bottom: 6px solid ${(props) => props.theme['green-100']};
+  
   font-family: 'Poppins';
 
   @media(max-width: 930px){
