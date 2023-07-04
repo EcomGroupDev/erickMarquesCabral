@@ -55,8 +55,15 @@ export const FooterTextContainer = styled.div`
   
 
   a{
-    width: 53%;
+    color: #fff;
+    text-decoration: none;
+    transition: color 1s;
+    
+    :hover{
+      color: #4B2995;
+    }
   }
+
 
   p {
     min-width: 200px;

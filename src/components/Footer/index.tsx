@@ -62,10 +62,10 @@ export function Footer() {
               <a href="#project">
                 <li>Projetos em destaque</li>
               </a>
-              <a>
+              <a href="https://github.com/erickmarquesc" target="_blank">
                 <li>GitHub</li>
               </a>
-              <a>
+              <a href="https://www.linkedin.com/in/erick-marques-cabral-999b151b4/" target="_blank">
                 <li>Linkedin</li>
               </a>
               <a href="#contact">
