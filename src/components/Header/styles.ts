@@ -27,7 +27,7 @@ export const HeaderSection = styled.div`
   justify-content: space-between;
 
 
-  @media(max-width: 800px){
+  @media(max-width: 900px){
     flex-direction: column;
     gap: 16px;
   }
