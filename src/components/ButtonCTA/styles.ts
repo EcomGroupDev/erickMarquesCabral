@@ -4,19 +4,25 @@ export const Button = styled.a`
   all: inherit;
   
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 
   font-size: 1.4rem;
-  padding: 20px 22px;
-  border-radius: 5px;
   font-weight: bolder;
-  background-color: #9747FF;
+
+  flex: 1;
   height: auto;
-  width: max-content;
+  padding: 20px 22px;
+  
   align-items: center;
+  justify-content: center;
+  background-color: #9747FF;
   
   :hover{
     filter: brightness(80%);
   }
 
+  @media(max-width: 930px){
+    display: none;
+  }
 `
