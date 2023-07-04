@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const HeroContainer = styled.div`
+  height: auto;
+  padding: 2rem 0 2rem;
+  background: ${(props) => props.theme['purple-dark']};
+  border-bottom: 6px solid ${(props) => props.theme['green-100']};
+`;
+
 export const HeroContent = styled.div`
   width: 100%;
   display: flex;
