@@ -1,8 +1,8 @@
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
-import { ApiHeaderNavigation } from "../../components/Header/ApiHeaderNavegation";
-import { Hero } from "../../components/Hero";
-import { Main } from "../../components/Main";
+import { ApiHeaderNavigation } from "../../components/Header/ApiHeaderNavegation"
+import { Header } from "../../components/Header"
+import { Footer } from "../../components/Footer"
+import { Hero } from "../../components/Hero"
+import { Main } from "../../components/Main"
 
 export function Home() {
   return (
@@ -15,7 +15,11 @@ export function Home() {
       
       <Hero />
 
-      <Main />
+      <Main.Root>
+        <Main.About />
+        <Main.Course />
+        <Main.Projects/>
+      </Main.Root>
 
       <Footer />
     </>

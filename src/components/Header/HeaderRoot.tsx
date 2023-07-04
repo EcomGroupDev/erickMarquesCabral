@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
-import { Hero } from "../Hero";
+import { ReactNode } from "react"
+
 import {
   HeaderContainer,
   HeaderContent,
-  HeaderSection} from "./styles";
+  HeaderSection
+} from "./styles"
 
 interface IHeaderRootProps {
   children: ReactNode

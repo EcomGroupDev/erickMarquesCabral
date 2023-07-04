@@ -1,4 +1,4 @@
-import { Menu } from "./styles";
+import { Menu } from "./styles"
 
 interface IHeaderMenuNavegationProps {
   menuItem: {
@@ -6,6 +6,7 @@ interface IHeaderMenuNavegationProps {
     text: string,
   }[]
 }
+
 export function HeaderMenuNavegation({ menuItem }: IHeaderMenuNavegationProps) {
   return (
     <Menu>

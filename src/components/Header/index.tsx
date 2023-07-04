@@ -1,7 +1,7 @@
-import { HeaderActions } from "./HeaderActions";
-import { HeaderLogo } from "./HeaderLogo";
-import { HeaderMenuNavegation } from "./HeaderMenuNavegation";
-import { HeaderRoot } from "./HeaderRoot";
+import { HeaderMenuNavegation } from "./HeaderMenuNavegation"
+import { HeaderActions } from "./HeaderActions"
+import { HeaderLogo } from "./HeaderLogo"
+import { HeaderRoot } from "./HeaderRoot"
 
 export const Header = {
   Root: HeaderRoot,

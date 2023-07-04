@@ -1,5 +1,5 @@
 export const ApiHeaderNavigation = [
-  { id: "#sobre", text: "Hard skills" },
-  { id: "#projetos", text: "Projetos" },
-  { id: "#contato", text: "Contato" }
+  { id: "#about", text: "Hard skills" },
+  { id: "#project", text: "Projetos" },
+  { id: "#contact", text: "Contato" }
 ]
