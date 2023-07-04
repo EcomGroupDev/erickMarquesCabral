@@ -45,6 +45,8 @@ export const HeroTextContent = styled.div`
     color: ${(props)=>props.theme['yellow']};
   }
 
+  
+
   ul{
     gap: 16px;
     display: flex;
@@ -62,8 +64,9 @@ export const HeroTextContent = styled.div`
 
 `;
 
-export const HeroButton = styled.button`
+export const HeroButton = styled.a`
   all: inherit;
+  cursor: pointer;
   color: ${(props) => props.theme['yellow']};
 
 `;

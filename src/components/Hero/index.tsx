@@ -26,8 +26,8 @@ export function Hero() {
             </ul>
           </HeroTextContent>
 
-          <HeroButton>
-            Veja mais +
+          <HeroButton href="#project">
+            Veja mais projetos +
           </HeroButton>
         </HeroTextContainer>
 
