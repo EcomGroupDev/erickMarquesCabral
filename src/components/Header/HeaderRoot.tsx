@@ -16,9 +16,6 @@ export function HeaderRoot({ children }: IHeaderRootProps) {
         <HeaderSection> {/* elemento root */}
           {children}
         </HeaderSection>
-
-        <Hero />
-
       </HeaderContent>
     </HeaderContainer>
   )
