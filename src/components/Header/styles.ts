@@ -5,6 +5,12 @@ export const HeaderContainer = styled.header`
   padding: 2rem 0 2rem;
   border-bottom: 6px solid ${(props) => props.theme['green-100']};
   font-family: 'Poppins';
+
+  @media(max-width: 930px){
+    .buttonHeader{
+      display: none;
+    }
+  }
 `;
 
 export const HeaderContent = styled.div`
