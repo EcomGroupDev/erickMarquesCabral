@@ -11,7 +11,6 @@ export function ButtonCAT({ text }: ButtonCATprops) {
   return (
     <Button
       href={`https://api.whatsapp.com/send?phone=${FONENUMBER}&text=${MESAGE}`}
-      className="buttonsLink"
       target="_blank">
       {text.toLocaleUpperCase()}
     </Button>

@@ -22,7 +22,4 @@ export const Button = styled.a`
     filter: brightness(80%);
   }
 
-  @media(max-width: 930px){
-    display: none;
-  }
 `
