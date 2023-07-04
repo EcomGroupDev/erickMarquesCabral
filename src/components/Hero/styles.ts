@@ -8,13 +8,17 @@ export const HeroContainer = styled.div`
 `;
 
 export const HeroContent = styled.div`
+  
   width: 100%;
+  max-width: 1200px;
+  
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
-  max-width: 1200px;
   align-items: center;
   justify-content: space-between;
+  
+  margin: 0 auto;
+  padding: 0 1.5rem;
 
   @media(max-width: 1070px){
     flex-direction: column;
