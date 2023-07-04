@@ -53,10 +53,7 @@ export const MainPostProject = styled.div`
   justify-content: center;
 
   a{
-    border: none;
-    :hover{
-      border: none;
-    }
+    text-decoration: none;
   }
 `
 
@@ -72,7 +69,6 @@ export const CardProject = styled.div`
     border-radius: 8px;
   }
   
-
   strong{
     color: #000;
     padding: 0 12px;
