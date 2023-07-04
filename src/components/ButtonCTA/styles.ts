@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.a`
   all: inherit;
+  
   border: none;
   cursor: pointer;
 
@@ -11,10 +12,11 @@ export const Button = styled.button`
   font-weight: bolder;
   background-color: #9747FF;
   height: auto;
-  width: auto;
+  width: max-content;
   align-items: center;
   
   :hover{
     filter: brightness(80%);
   }
+
 `
