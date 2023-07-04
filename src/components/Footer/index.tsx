@@ -1,12 +1,23 @@
-import { ButtonCAT } from "../ButtonCTA";
 import ilustration from "../../assets/ilustration.svg"
-import { FooterMain, FooterContent, FooterContainer, FooterTextContainer, FooterContentBottom, FooterContainerBottom, FooterContentBottomLinks, Buttonscontainer } from "./styles";
-import { Logo } from "../Logo";
 import ecomIcon from "../../assets/icon/ecom.svg"
+import { ButtonCAT } from "../ButtonCTA"
+import { Logo } from "../Logo"
+
+import {
+  FooterMain,
+  FooterContent,
+  FooterContainer,
+  FooterTextContainer,
+  FooterContentBottom,
+  FooterContainerBottom,
+  FooterContentBottomLinks,
+  Buttonscontainer
+} from "./styles"
+
 export function Footer() {
   return (
     <FooterMain>
-      <FooterContent id="contato">
+      <FooterContent id="contact">
 
         <FooterContainer >
           <FooterTextContainer>
@@ -48,7 +59,7 @@ export function Footer() {
         <FooterContentBottom>
           <div>
             <FooterContentBottomLinks>
-              <a href="#projetos">
+              <a href="#project">
                 <li>Projetos em destaque</li>
               </a>
               <a>
@@ -57,7 +68,7 @@ export function Footer() {
               <a>
                 <li>Linkedin</li>
               </a>
-              <a href="#contato">
+              <a href="#contact">
                 <li>Contato</li>
               </a>
             </FooterContentBottomLinks>
