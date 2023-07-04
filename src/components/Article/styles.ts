@@ -18,9 +18,9 @@ export const ArticleMainContent = styled.article`
   max-width: 471px;
   height: 234px;
   display: flex;
-  color: #000000;
+  color: ${(props)=>props.theme["base"]};
   flex-direction: column;
-  border-top: solid 9px #F68F31;
+  border-top: solid 9px ${(props) => props.theme["yellow"]};
 `
 
 export const ArticleMainTextArea = styled.div`
@@ -29,7 +29,7 @@ export const ArticleMainTextArea = styled.div`
 
   h1{
     font-size: 24px;
-    color: #290742 ;
+    color: ${(props) => props.theme["purple-500"]} ;
     font-weight: 700;
     font-family: 'Poppins';
   }
@@ -53,7 +53,7 @@ export const SocialMideaButtonConteiner = styled.div`
   margin-top: 40px;
   
   img{
-    background-color: #323238;
+    background-color: ${(props) => props.theme["gray"]};
     padding: 12px;
   }
 `

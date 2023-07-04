@@ -4,26 +4,27 @@ import backgroundImg from "../../assets/backgraund.svg";
 export const FooterMain = styled.footer`
   display: flex;
   flex-direction: column;
-  padding: 2px 0;
+  
   gap: 12px;
+  padding: 2px 0;
 `;
 
 export const FooterContent = styled.div`
-  background-image: url(${backgroundImg});
-  background-size: cover;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-
   width: 100%;
+  display: flex;
+  height: 100vh;
   margin: 0 auto;
   padding: 0 1.5rem;
+  
+  align-items: center;
+  justify-content: center;
   justify-content: space-between;
+  
+  background-size: cover;
+  background-image: url(${backgroundImg});
 `;
 
 export const FooterContainer = styled.div`
-
   width: 100%;
   display: flex;
   margin: 0 auto;
@@ -53,23 +54,22 @@ export const FooterTextContainer = styled.div`
   margin: 0 auto;
   flex-direction: column;
   
-
   a{
-    color: #fff;
     text-decoration: none;
+    color: ${(props) => props.theme["white"]};
+    
     transition: color 1s;
     
     :hover{
-      color: #4B2995;
+      color: ${(props) => props.theme["purple-300"]};
     }
   }
-
 
   p {
     min-width: 200px;
     font-size: 3.8rem;
     line-height: 46px;
-    color: #000;
+    color: ${(props) => props.theme["base"]};
     font-family: 'Space Grotesk', sans-serif;
 
     @media(max-width: 1070px){
@@ -82,20 +82,23 @@ export const FooterTextContainer = styled.div`
   }
 
   label{
-    border: solid 2px white;
-    border-radius: 90px;
-    padding: 12px;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+   
     gap: 12px;
     width: 350px;
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    font-family: 'Space Grotesk', sans-serif;
+   
+    border: solid 2px white;
+    border-radius: 90px;
+    
     font-size: 2.4rem;
+    font-family: 'Space Grotesk', sans-serif;
 
     strong{
-      color: #000;
+      color: ${(props) => props.theme["base"]};
     }
 
     img{
@@ -105,12 +108,12 @@ export const FooterTextContainer = styled.div`
 `;
 
 export const FooterContainerBottom = styled.div`
-  align-items: center;
-  justify-content: center;
-  display: flex;
   width: 100%;
+  display: flex;
   margin: 0 auto;
   padding: 0 1.5rem;
+  align-items: center;
+  justify-content: center;
   justify-content: space-between;
 `;
 
@@ -123,7 +126,7 @@ export const FooterContentBottom = styled.div`
   padding: 0 1.5rem;
   align-items: center;
   justify-content: space-between;
-  color: #000;
+  color: ${(props) => props.theme["base"]};
 
   display: flex;
   flex-direction: column;
@@ -133,20 +136,19 @@ export const FooterContentBottom = styled.div`
   }
 
   section{
+    width: 100%;
     color: gray;
     font-size: 1.2rem;
-    width: 100%;
   }
 
   div{
-
-    width: 100%;
-    text-align: justify;
-    display: flex;
-    flex-direction: row;
     gap: 32px;
-    justify-content: space-between;
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
+    text-align: justify;
+    flex-direction: row;
+    justify-content: space-between;
 
     P{
       max-width: 450px;
@@ -155,18 +157,18 @@ export const FooterContentBottom = styled.div`
 `;
 
 export const FooterContentBottomLinks = styled.ul`
+  gap: 6px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
     
   a{
     all: inherit;
-    color: #000;
+    color: ${(props) => props.theme["base"]};
     cursor: pointer;
   }
 
   li{
-    color: #000;
+    color: ${(props) => props.theme["base"]};
     all: inherit;
   }
 `

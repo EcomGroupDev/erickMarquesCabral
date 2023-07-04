@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeroContainer = styled.div`
   height: auto;
   padding: 2rem 0 2rem;
-  background: ${(props) => props.theme['purple-dark']};
+  background: ${(props) => props.theme['purple-300']};
   border-bottom: 6px solid ${(props) => props.theme['green-100']};
 `;
 

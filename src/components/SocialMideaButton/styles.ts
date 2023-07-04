@@ -6,7 +6,7 @@ export const SocialMideaButtonConteiner = styled.div`
   margin-top: 40px;
   
   img{
-    background-color: #323238;
+    background-color: ${(props) => props.theme["gray"]};
     padding: 12px;
   }
 `

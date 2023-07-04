@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  background: ${(props) => props.theme['purple-dark']};
+  background: ${(props) => props.theme['purple-300']};
   padding: 2rem 0 2rem;
   
   font-family: 'Poppins';

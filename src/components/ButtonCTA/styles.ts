@@ -16,7 +16,7 @@ export const Button = styled.a`
   
   align-items: center;
   justify-content: center;
-  background-color: #9747FF;
+  background-color: ${(props) => props.theme["purple-200"]};
   
   :hover{
     filter: brightness(80%);

@@ -35,7 +35,7 @@ export const MainCourse = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  border: dashed 3px #9747FF;
+  border: dashed 3px ${(props) => props.theme["purple-200"]};
   border-radius: 10px;
   padding: 12px;
 
@@ -70,18 +70,18 @@ export const CardProject = styled.div`
   }
   
   strong{
-    color: #000;
+    color: ${(props) => props.theme["base"]};
     padding: 0 12px;
     font-size: 1.6rem;
   }
   
   h1{
-    color: #290742;
+    color: ${(props) => props.theme["purple-500"]};
     padding: 0 10px;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.6rem;
-    border-left: solid 5px #9747FF;
+    border-left: solid 5px ${(props) => props.theme["purple-200"]};
   }
 
   .h1effect {
@@ -89,7 +89,7 @@ export const CardProject = styled.div`
 
     z-index: 1;
     padding: 10px;
-    color: #290742;
+    color: ${(props) => props.theme["purple-500"]};
     position: relative;
   }
 
@@ -101,7 +101,7 @@ export const CardProject = styled.div`
     z-index: -1;
     height: 100%;
     position: absolute;
-    background-color: #9747FF;
+    background-color: ${(props) => props.theme["purple-200"]};
     transition: width 1s ease;
   }
 
@@ -111,11 +111,11 @@ export const CardProject = styled.div`
   
   .h1effect:hover {
     transition: color 1s ease;
-    color: #ffffff; /* Define a cor do texto durante o hover */
+    color: ${(props) => props.theme["white"]}; /* Define a cor do texto durante o hover */
   }
 
   p{
-    color: #000;
+    color: ${(props) => props.theme["base"]};
     padding: 0 12px;
     font-size: 1.6rem;
     font-family: Roboto;

@@ -5,24 +5,16 @@ export const defaultTheme = {
 
   'pink': '#FB87F0',
 
-  'purple-dark': '#4B2995',
+  'purple-100': '#EBE5F9',
   'purple': '#8047F8',
-  'purple-light': '#EBE5F9',
-
-  'base': '#000000',
-  'base-background': '#100028',
-
-  'base-title': '#272221',
-  'base-subtitle': '#403937',
-  'base-text': '#574F4D',
-  'base-label': '#8D8686',
-
-  'base-hover': '#D7D5D5',
-  'base-button': '#E6E5E5',
-  'base-input': '#EDEDED',
-  'base-card': '#F3F2F2',
+  'purple-200': '#9747FF',
+  'purple-300': '#4B2995',
+  'purple-500': '#290742',
 
   'white': '#FFFFFF',
+  'base': '#000000',
+
+  'gray': '#323238',
 
   'green-100': '#4FFF4B',
   'green-300': '#00B37E',
