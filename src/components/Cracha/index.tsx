@@ -9,7 +9,7 @@ export function Cracha() {
         <h1>Erick Marques</h1>
         <section>
           <img src={gitHubIcon} />
-          <strong>usernamegithub</strong>
+          <strong>erickmarquesc</strong>
         </section>
         <p>
           Um desenvolvedor frontend e UI designer especializado
