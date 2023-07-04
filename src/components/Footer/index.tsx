@@ -1,6 +1,6 @@
 import { ButtonCAT } from "../ButtonCTA";
 import ilustration from "../../assets/ilustration.svg"
-import { FooterMain, FooterContent, FooterContainer, FooterTextContainer, FooterContentBottom, FooterContainerBottom, FooterContentBottomLinks } from "./styles";
+import { FooterMain, FooterContent, FooterContainer, FooterTextContainer, FooterContentBottom, FooterContainerBottom, FooterContentBottomLinks, Buttonscontainer } from "./styles";
 import { Logo } from "../Logo";
 import ecomIcon from "../../assets/icon/ecom.svg"
 export function Footer() {
@@ -26,9 +26,11 @@ export function Footer() {
 
             </label>
 
-            <ButtonCAT
-              text="entre em contato pelo whatsapp"
-            />
+            <Buttonscontainer>
+              <ButtonCAT
+                text="entre em contato pelo whatsapp"
+              />
+            </Buttonscontainer>
 
             <a href="https://github.com/erickmarquesc" target="_blank">
               veja outros projetos no GitHub +
@@ -64,7 +66,7 @@ export function Footer() {
               desenvolvimento de projetos web e mobile, costituida por desenvolvedores idependetes
               promovendo visibilidade e oportunidades dentro do mundo tecnológico.
             </p>
-            
+
           </div>
 
           <section>

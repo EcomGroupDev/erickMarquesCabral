@@ -163,3 +163,8 @@ export const FooterContentBottomLinks = styled.ul`
     all: inherit;
   }
 `
+
+export const Buttonscontainer = styled.div`
+  width: 100%;
+  display: flex;
+`
