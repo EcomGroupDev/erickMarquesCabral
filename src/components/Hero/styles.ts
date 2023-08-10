@@ -1,25 +1,14 @@
 import styled from "styled-components";
+import { Container, Content } from "../containers/containers";
 
-export const HeroContainer = styled.div`
-  height: auto;
-  padding: 2rem 0 2rem;
+export const HeroContainer = styled(Container)`
   background: ${(props) => props.theme['purple-300']};
   border-bottom: 6px solid ${(props) => props.theme['green-100']};
 `;
 
-export const HeroContent = styled.div`
-  
-  width: 100%;
-  max-width: 1200px;
-  
-  display: flex;
+export const HeroContent = styled(Content)`
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   
-  margin: 0 auto;
-  padding: 0 1.5rem;
-
   @media(max-width: 1070px){
     flex-direction: column;
     gap: 16px;
@@ -44,8 +33,6 @@ export const HeroTextContent = styled.div`
   span{
     color: ${(props)=>props.theme['yellow']};
   }
-
-  
 
   ul{
     gap: 16px;

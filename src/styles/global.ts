@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    background: ${(props) => props.theme['purple-light']};
+    background: ${(props) => props.theme['purple-100']};
   };
   
   body, input, textarea, h1, button  {
@@ -25,13 +25,11 @@ export const GlobalStyle = createGlobalStyle`
     width: 12px;
   };
   body::-webkit-scrollbar-track {
-    background: ${(props) => props.theme['purple-dark']};
+    background: ${(props) => props.theme['purple-500']};
   };
   body::-webkit-scrollbar-thumb {
     border-radius: 20px;
     background-color: ${(props) => props.theme.white};
-    border: 3px solid ${(props) => props.theme['purple-dark']};
+    border: 3px solid ${(props) => props.theme['purple-500']};
   };
-
-  
 `
