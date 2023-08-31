@@ -1,9 +1,8 @@
 import styled from "styled-components";
+import { Container, Content } from "../containers/containers";
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled(Container)`
   background: ${(props) => props.theme['purple-300']};
-  padding: 2rem 0 2rem;
-  
   font-family: 'Poppins';
 
   @media(max-width: 930px){
@@ -13,25 +12,7 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const HeaderContent = styled.div`
-  display: flex;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1.5rem;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-export const HeaderSection = styled.div`
-  width: 100%;
-  display: flex;
-  padding: 24px 0;
-  flex-direction: row;
-  align-items: center;
-  
-  justify-content: space-between;
-
+export const HeaderContent = styled(Content)`
 
   @media(max-width: 900px){
     flex-direction: column;
@@ -39,8 +20,9 @@ export const HeaderSection = styled.div`
   }
 `;
 
+
 export const Menu = styled.nav`
-  width: 300px;
+  width: 500px;
 
   ul{
     width: auto;

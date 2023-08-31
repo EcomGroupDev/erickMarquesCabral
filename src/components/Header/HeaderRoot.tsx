@@ -3,7 +3,6 @@ import { ReactNode } from "react"
 import {
   HeaderContainer,
   HeaderContent,
-  HeaderSection
 } from "./styles"
 
 interface IHeaderRootProps {
@@ -12,11 +11,9 @@ interface IHeaderRootProps {
 
 export function HeaderRoot({ children }: IHeaderRootProps) {
   return (
-    <HeaderContainer> {/* container de estilos */}
+    <HeaderContainer as="header"> {/* container de estilos */}
       <HeaderContent> {/* container de estilos */}
-        <HeaderSection> {/* elemento root */}
           {children}
-        </HeaderSection>
       </HeaderContent>
     </HeaderContainer>
   )
