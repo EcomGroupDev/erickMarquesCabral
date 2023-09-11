@@ -16,7 +16,7 @@ export const WorkFlowHeroContent = styled(Content)`
 `
 
 export const Label = styled.label`
-  color: #A6A6A6;
+  color: ${(props)=>props.theme['gray-100']};
   padding: 6px 12px;
   border-radius: 100px;
   background: rgba(100, 100, 100, 0.4);
@@ -25,17 +25,27 @@ export const Label = styled.label`
 `
 
 export const TitleContent = styled.div`
-display: flex;
-flex-direction: column;
-gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: ${(props)=>props.theme['gray-100']};
+  
   h1{
     font-size: 8.8rem;
     font-weight: 100;
+
+    @media(max-width: 1100px){
+      font-size: 4.8rem;
+    }
   }
+
   h2{
     font-size: 8.8rem;
     font-weight: 400;
-    width: 90%;
+    max-width: 90%;
+    @media(max-width: 1100px){
+      font-size: 6.4rem;
+    }
   }
 `
 
@@ -60,7 +70,7 @@ export const WorkFlowContent = styled(Content)`
     font-weight: 500;
 
     p{
-      width: 750px;
+      max-width: 750px;
       text-align: justify;
     }
   }
@@ -77,7 +87,38 @@ export const WorkFlowContent = styled(Content)`
       text-align: justify;
       margin-bottom: 32px;
     }
+
+    .summaryeffect {
+      transition: color 2s ease;
+
+      z-index: 1;
+      padding: 10px;
+      color: ${(props) => props.theme["white"]};
+      position: relative;
     }
+
+    .summaryeffect::before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0;
+      z-index: -1;
+      height: 100%;
+      position: absolute;
+      background-color: ${(props) => props.theme["purple-200"]};
+      transition: width 1s ease;
+      border-radius: 90px;
+    }
+
+    .summaryeffect:hover::before {
+      width: 100%;
+    }
+    
+    .summaryeffect:hover {
+      transition: color 1s ease;
+      color: ${(props) => props.theme["white"]}; /* Define a cor do texto durante o hover */
+    }
+  }
 
   
 `
