@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container, Content } from "../containers/containers";
-
+import icon from "../../assets/icon/githubIcon2.svg"
 export const HeaderContainer = styled(Container)`
   background: ${(props) => props.theme['purple-300']};
   font-family: 'Poppins';
@@ -13,25 +13,24 @@ export const HeaderContainer = styled(Container)`
 `;
 
 export const HeaderContent = styled(Content)`
-
   @media(max-width: 900px){
-    flex-direction: column;
     gap: 16px;
   }
 `;
 
-
 export const Menu = styled.nav`
-  width: 500px;
-
+  
   ul{
-    width: auto;
     display: flex;
+    gap: 18px;
     flex-direction: row;
-    justify-content: space-between;
 
     li{
       all: inherit;
+    }
+
+    @media(max-width: 800px){
+      display: none;
     }
   }
 
@@ -58,4 +57,26 @@ export const Menu = styled.nav`
     color: ${(props) => props.theme["white"]};
     border-bottom: solid 3px ${(props) => props.theme["green-100"]};
   };
+
+   select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: url(${icon}) no-repeat; /* Define uma imagem de fundo */
+        background-size: 20px 20px; /* Ajuste o tamanho da imagem */
+        background-position: right center; /* A posição da imagem de fundo */
+
+        /* Mudar a cor de fundo */
+        background-color: #f0f0f0;
+        border: 1px solid #ccc; /* Adicione uma borda */
+        padding: 5px; /* Adicione um espaço interno para o texto */
+        color: #333; /* Cor do texto */
+
+        /* Personalizar a cor de destaque quando passar o mouse */
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    select:hover {
+        background-color: red; /* Cor de destaque ao passar o mouse */
+    }
 `;

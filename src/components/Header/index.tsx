@@ -1,11 +1,11 @@
 import { HeaderMenuNavegation } from "./HeaderMenuNavegation"
-import { HeaderActions } from "./HeaderActions"
-import { HeaderLogo } from "./HeaderLogo"
 import { HeaderRoot } from "./HeaderRoot"
+import { Logo } from "../Logo"
+import { ButtonCAT } from "../ButtonCTA"
 
 export const Header = {
   Root: HeaderRoot,
-  Logo: HeaderLogo,
+  Logo: Logo,
   Menu: HeaderMenuNavegation,
-  Actions: HeaderActions
+  Actions: ButtonCAT
 }
