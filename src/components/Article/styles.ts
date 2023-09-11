@@ -1,13 +1,10 @@
 import styled from "styled-components";
 
 export const ArticleMainContainer = styled.article`
+  gap: 32px;
+  max-width: 510px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 75px;
-  gap: 32px;
-  width: 100%;
 
   @media(max-width: 1070px){
     gap: 42px;
@@ -15,11 +12,9 @@ export const ArticleMainContainer = styled.article`
 `
 export const ArticleMainContent = styled.article`
   gap: 12px;
-  max-width: 471px;
-  height: 234px;
   display: flex;
-  color: ${(props)=>props.theme["base"]};
   flex-direction: column;
+  color: ${(props)=>props.theme["base"]};
   border-top: solid 9px ${(props) => props.theme["yellow"]};
 `
 
@@ -28,32 +23,24 @@ export const ArticleMainTextArea = styled.div`
   flex-direction: column;
 
   h1{
-    font-size: 24px;
+    font: 700 2.4rem 'Poppins', sans-serif;
     color: ${(props) => props.theme["purple-500"]} ;
-    font-weight: 700;
-    font-family: 'Poppins';
   }
 
   p{
-    font-size: 16px;
-    font-weight: 400;
+    font: 400 1.8rem 'Roboto', sans-serif;
+    max-width: 500px;
+    line-height: 26px;
     text-align: justify;
-    font-family: 'Roboto';
   }
 `
 
 export const ArticleMainIconsArea = styled.div`
+  gap: 24px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-`
-export const SocialMideaButtonConteiner = styled.div`
-  display: flex;
-  gap: 8px;
-  margin-top: 40px;
-  
+
   img{
-    background-color: ${(props) => props.theme["gray"]};
-    padding: 12px;
+    width: 28px;
   }
 `
