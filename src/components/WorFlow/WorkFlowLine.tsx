@@ -19,7 +19,7 @@ export function WorkFlowLine() {
         </div>
 
         <details className="item">
-          <summary>
+          <summary className="summaryeffect">
             1. Sprint de Entendimento
           </summary>
           <p>
@@ -100,7 +100,7 @@ export function WorkFlowLine() {
         </details>
 
         <details className="item">
-          <summary>
+          <summary className="summaryeffect">
             2. Sprint de Prototipação
           </summary>
           <p>
@@ -146,7 +146,7 @@ export function WorkFlowLine() {
         </details>
 
         <details className="item">
-          <summary>
+          <summary className="summaryeffect">
             3. Sprint de Validação
           </summary>
           <p>
@@ -169,7 +169,7 @@ export function WorkFlowLine() {
         </details>
 
         <details className="item">
-          <summary>
+          <summary className="summaryeffect">
             4. Visual Design
           </summary>
           <p>
@@ -239,7 +239,7 @@ export function WorkFlowLine() {
         </details>
 
         <details className="item">
-          <summary>
+          <summary className="summaryeffect">
             5. Desenvolvimento
           </summary>
           <p>
@@ -255,7 +255,7 @@ export function WorkFlowLine() {
         </details>
 
         <details className="item">
-          <summary>
+          <summary className="summaryeffect">
             Conclusão
           </summary>
           <p>

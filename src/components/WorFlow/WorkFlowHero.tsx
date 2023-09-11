@@ -11,7 +11,7 @@ export function WorkFlowHero() {
         <TitleContent>
           <Label>Desenvolvedor | UI Designer</Label>
           <h1>
-            Onboard
+            WORKFLOW
           </h1>
           <h2>
             Mapeando e construindo seu projeto
