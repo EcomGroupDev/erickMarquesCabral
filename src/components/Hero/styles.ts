@@ -29,9 +29,19 @@ export const HeroTextContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  
+  h1{
+    font: 700 3.6rem 'Poppins', sans-serif;
+  };
 
   span{
-    color: ${(props)=>props.theme['yellow']};
+    color: ${(props) => props.theme['yellow']};
+    font: 700 3.6rem 'Poppins', sans-serif;
+  }
+
+  p{
+    font-size: 1.6rem;
+    color: ${(props) => props.theme['yellow']};
   }
 
   ul{
@@ -39,16 +49,8 @@ export const HeroTextContent = styled.div`
     display: flex;
     padding: 0 16px;
     flex-direction: column;
-  };
-
-  h1{
-    font: 700 3.6rem 'Poppins', sans-serif;
-  };
-
-  li{
     font: 500 1.8rem 'Poppins', sans-serif;
   };
-
 `;
 
 export const HeroButton = styled.a`
