@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
 export const Button = styled.a`
+  
   all: inherit;
+  cursor: pointer;
+  text-transform: uppercase;
   
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  width: auto;
 
   font-size: 1.4rem;
   font-weight: bolder;
-
-  flex: 1;
-  height: auto;
+  
   padding: 20px 22px;
   
   align-items: center;
@@ -20,6 +21,20 @@ export const Button = styled.a`
   
   :hover{
     filter: brightness(80%);
+  }
+
+  img{
+    display: none;
+  }
+
+  @media(max-width:1000px){
+    img{
+      display: flex;
+    }
+
+    strong{
+      display: none;
+    }
   }
 
 `
