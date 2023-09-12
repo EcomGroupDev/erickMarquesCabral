@@ -9,9 +9,7 @@ export function MainCourseSection() {
         src={cursos}
         alt="imagem de cursos"
       />
-      <ButtonCAT
-        text="Entre em contato pelo whatsapp"
-      />
+      <ButtonCAT />
     </MainCourse>
   )
 }
