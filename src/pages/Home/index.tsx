@@ -13,18 +13,19 @@ export function Home() {
         <Header.Menu menuItem={ApiHeaderNavigation} />
         <Header.Actions />
       </Header.Root>
-      
+
       <Hero />
 
       <Main.Root>
         <Main.About />
+        <Main.Tasks/>
         <Main.Course />
-        <Main.Projects/>
+        <Main.Projects />
       </Main.Root>
 
       <WorkFlow.Root>
         <WorkFlow.Hero />
-        <WorkFlow.Itens/>
+        <WorkFlow.Itens />
       </WorkFlow.Root>
 
       <Footer />
