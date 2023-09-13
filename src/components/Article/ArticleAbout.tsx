@@ -1,9 +1,12 @@
 import {  ArticleMainTextArea} from "./styles"
 
 export function ArticleAbout() {
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - 1996;
+
   return (
     <ArticleMainTextArea>
-      <h1>Olá ✌️! <br />Meu nome é Erick Marques tenho 27 anos</h1>
+      <h1>Olá ✌️! <br />Meu nome é Erick Marques tenho {age} anos</h1>
       <p>
         Sou programador front-end, apaixonado por tecnologia.<br />
         Atualmente trabalho como Desenvolvedor web e como UI Designer na Satel Brasil.<br />
