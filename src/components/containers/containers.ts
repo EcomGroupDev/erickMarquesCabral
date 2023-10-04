@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: auto;
-  padding: 2rem 0 2rem;
+  padding: 2rem 2rem;
 `;
 
 export const Content = styled.div`
