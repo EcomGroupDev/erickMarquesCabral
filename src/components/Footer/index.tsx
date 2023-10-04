@@ -39,7 +39,6 @@ export function Footer() {
 
             <Buttonscontainer>
               <ButtonCAT
-                text="entre em contato pelo whatsapp"
               />
             </Buttonscontainer>
 
