@@ -1,82 +1,157 @@
 import styled from "styled-components";
-import { Container, Content } from "../containers/containers";
-import icon from "../../assets/icon/githubIcon2.svg"
+import { media } from "../../styles/media";
+import { Container } from "../ui/Layout";
+
+export const SkipLink = styled.a`
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+  transform: translateY(-200%);
+
+  &:focus-visible {
+    transform: none;
+  }
+`;
+
+export const Bar = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+
+  &[data-scrolled="true"] {
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    border-color: var(--border);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+  }
+`;
+
 export const HeaderContainer = styled(Container)`
-  background: ${(props) => props.theme['purple-300']};
-  font-family: 'Poppins';
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+`;
 
-  @media(max-width: 930px){
-    .buttonHeader{
-      display: none;
-    }
+export const Brand = styled.a`
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+
+  span {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.8125rem;
+    letter-spacing: 0;
   }
 `;
 
-export const HeaderContent = styled(Content)`
-  @media(max-width: 900px){
-    gap: 16px;
-  }
-`;
+export const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 32px;
 
-export const Menu = styled.nav`
-  
-  ul{
+  ul {
     display: flex;
-    gap: 18px;
-    flex-direction: row;
+    gap: 28px;
+  }
 
-    li{
-      all: inherit;
+  ul a {
+    position: relative;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.2s var(--ease);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.25s var(--ease);
     }
 
-    @media(max-width: 800px){
-      display: none;
+    &:hover,
+    &[aria-current="true"] {
+      color: var(--text);
+    }
+
+    &[aria-current="true"]::after {
+      transform: scaleX(1);
     }
   }
 
-  a{
-    cursor: pointer;
-    text-decoration: none;
-    color: ${(props) => props.theme["white"]};
-    padding: 0 0 3px 0;
-    border-bottom: solid 3px transparent;
-    width: auto;
-  };
-  /* link que foi visitado */
-  a:visited {
-    color: none;
-    border-bottom: solid 3px ${(props) => props.theme["green-100"]};
-  };
-  /* mouse over */
-  a:hover {
-    transition: 1s;
-    border-bottom: solid 3px ${(props) => props.theme["green-100"]};
-  };
-  /* link selecionado */
-  a:active {
-    color: ${(props) => props.theme["white"]};
-    border-bottom: solid 3px ${(props) => props.theme["green-100"]};
-  };
+  ${media.md} {
+    display: none;
+  }
+`;
 
-   select {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        background: url(${icon}) no-repeat; /* Define uma imagem de fundo */
-        background-size: 20px 20px; /* Ajuste o tamanho da imagem */
-        background-position: right center; /* A posição da imagem de fundo */
+export const MenuButton = styled.button`
+  display: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  border-radius: 10px;
 
-        /* Mudar a cor de fundo */
-        background-color: #f0f0f0;
-        border: 1px solid #ccc; /* Adicione uma borda */
-        padding: 5px; /* Adicione um espaço interno para o texto */
-        color: #333; /* Cor do texto */
+  ${media.md} {
+    display: grid;
+  }
+`;
 
-        /* Personalizar a cor de destaque quando passar o mouse */
-        transition: background-color 0.3s ease-in-out;
+export const MobileNav = styled.nav`
+  display: none;
+  padding: 8px var(--gutter) 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  a:not([class]) {
+    display: block;
+    padding: 14px 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border);
+  }
+
+  > a {
+    width: 100%;
+  }
+
+  ${media.md} {
+    &[data-open="true"] {
+      display: block;
     }
-
-    select:hover {
-        background-color: red; /* Cor de destaque ao passar o mouse */
-    }
+  }
 `;
