@@ -1,95 +1,72 @@
-import ilustration from "../../assets/ilustration.svg"
-import ecomIcon from "../../assets/icon/ecom.svg"
-import { ButtonCAT } from "../ButtonCTA"
-import { Logo } from "../Logo"
+import styled from "styled-components";
+import { profile } from "../../data/profile";
+import { media } from "../../styles/media";
+import { Icon } from "../ui/Icon";
+import { Container } from "../ui/Layout";
 
-import {
-  FooterMain,
-  FooterContent,
-  FooterContainer,
-  FooterTextContainer,
-  FooterContentBottom,
-  FooterContainerBottom,
-  FooterContentBottomLinks,
-  Buttonscontainer
-} from "./styles"
+const FooterBar = styled.footer`
+  padding: 32px 0 40px;
+  border-top: 1px solid var(--border);
+`;
+
+const Inner = styled(Container)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 0.875rem;
+  color: var(--text-subtle);
+
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s var(--ease);
+
+    ${media.touch} {
+      &::after {
+        content: "";
+        position: absolute;
+        inset: -11px -6px;
+      }
+    }
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+
+  ${media.sm} {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+`;
 
 export function Footer() {
   return (
-    <FooterMain>
-      <FooterContent id="contact">
-
-        <FooterContainer >
-          <FooterTextContainer>
-
-            <Logo />
-
-            <p>
-              Vamos trabalhar juntos!<br />
-              Entre em contato.
-            </p>
-
-            <label>
-              <img src={ecomIcon} />
-              <strong>
-                +30 PROJETOS
-              </strong>
-
-            </label>
-
-            <Buttonscontainer>
-              <ButtonCAT
-              />
-            </Buttonscontainer>
-
-            <a href="https://github.com/erickmarquesc" target="_blank">
-              veja outros projetos no GitHub +
-            </a>
-
-          </FooterTextContainer>
-
-          <img src={ilustration} className="ilustration" />
-
-        </FooterContainer>
-
-      </FooterContent>
-
-      <FooterContainerBottom>
-        <FooterContentBottom>
-          <div>
-            <FooterContentBottomLinks>
-              <a href="#project">
-                <li>Projetos em destaque</li>
-              </a>
-              <a href="https://github.com/erickmarquesc" target="_blank">
-                <li>GitHub</li>
-              </a>
-              <a href="https://www.linkedin.com/in/erick-marques-cabral-999b151b4/" target="_blank">
-                <li>Linkedin</li>
-              </a>
-              <a href="#contact">
-                <li>Contato</li>
-              </a>
-            </FooterContentBottomLinks>
-            <p>
-              Ecom é uma organização GitHub criado por Erick Marques para
-              desenvolvimento de projetos web e mobile, costituida por desenvolvedores idependetes
-              promovendo visibilidade e oportunidades dentro do mundo tecnológico.
-            </p>
-
-          </div>
-
-          <section>
-            <p>
-              Erick Marques - Todos os direitos reservados
-            </p>
-            <strong>
-              Projeto Ecom | Erick Marques
-            </strong>
-          </section>
-        </FooterContentBottom>
-      </FooterContainerBottom>
-
-    </FooterMain>
-  )
+    <FooterBar>
+      <Inner>
+        <p>
+          © {new Date().getFullYear()} {profile.name}
+        </p>
+        <nav aria-label="Redes">
+          <a href={profile.links.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a href={profile.links.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a href="#inicio">
+            Voltar ao topo <Icon name="arrowUp" size={14} />
+          </a>
+        </nav>
+      </Inner>
+    </FooterBar>
+  );
 }
