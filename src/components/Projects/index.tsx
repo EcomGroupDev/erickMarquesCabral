@@ -1,22 +1,11 @@
 import { featuredProjects, otherProjects } from "../../data/projects";
 import { profile } from "../../data/profile";
-import { Chip, ChipList, TextLink } from "../ui/Button";
+import { TextLink } from "../ui/Button";
 import { Icon } from "../ui/Icon";
 import { Container, Section, SectionHeading } from "../ui/Layout";
 import { Reveal } from "../ui/Reveal";
-import { ProjectCover } from "./ProjectCover";
-import {
-  Details,
-  Featured,
-  FeaturedList,
-  Highlights,
-  Info,
-  Links,
-  Meta,
-  OtherHeading,
-  OtherItem,
-  OtherList,
-} from "./styles";
+import { Project } from "./Project";
+import { FeaturedList, Links, OtherHeading, OtherItem, OtherList } from "./styles";
 
 export function Projects() {
   return (
@@ -33,54 +22,21 @@ export function Projects() {
         <FeaturedList>
           {featuredProjects.map((project, index) => (
             <Reveal key={project.title}>
-              <Featured $reverse={index % 2 === 1}>
-                <ProjectCover variant={project.cover} />
-
-                <Info>
-                  <Meta>
-                    {project.kind} · {project.year}
-                  </Meta>
-                  <h3>{project.title}</h3>
-                  <p>{project.summary}</p>
-
-                  <Details>
-                    <div>
-                      <dt>Proposta</dt>
-                      <dd>{project.challenge}</dd>
-                    </div>
-                    <div>
-                      <dt>O que construí</dt>
-                      <dd>{project.solution}</dd>
-                    </div>
-                  </Details>
-
-                  <Highlights>
-                    {project.highlights.map((highlight) => (
-                      <li key={highlight}>
-                        <Icon name="check" size={16} />
-                        {highlight}
-                      </li>
-                    ))}
-                  </Highlights>
-
-                  <ChipList aria-label="Tecnologias">
-                    {project.stack.map((tech) => (
-                      <Chip key={tech}>{tech}</Chip>
-                    ))}
-                  </ChipList>
-
-                  <Links>
-                    {project.links.demo && (
-                      <TextLink href={project.links.demo} target="_blank" rel="noreferrer">
-                        Ver online <Icon name="arrowUpRight" size={16} />
-                      </TextLink>
-                    )}
-                    <TextLink href={project.links.code} target="_blank" rel="noreferrer">
-                      Código <Icon name="arrowUpRight" size={16} />
-                    </TextLink>
-                  </Links>
-                </Info>
-              </Featured>
+              <Project.Root reverse={index % 2 === 1}>
+                <Project.Cover variant={project.cover} />
+                <Project.Info>
+                  <Project.Header
+                    kind={project.kind}
+                    year={project.year}
+                    title={project.title}
+                    summary={project.summary}
+                  />
+                  <Project.Details challenge={project.challenge} solution={project.solution} />
+                  <Project.Highlights items={project.highlights} />
+                  <Project.Stack items={project.stack} />
+                  <Project.Links demo={project.links.demo} code={project.links.code} />
+                </Project.Info>
+              </Project.Root>
             </Reveal>
           ))}
         </FeaturedList>

@@ -1,10 +1,10 @@
 import { experiences } from "../../data/experience";
-import { formatDuration, formatMonth } from "../../utils/date";
-import { Chip, ChipList } from "../ui/Button";
 import { Container, Section, SectionHeading } from "../ui/Layout";
 import { Reveal } from "../ui/Reveal";
-import { AIHighlight } from "./AIHighlight";
-import { Body, Current, Item, Period, Timeline } from "./styles";
+import { aiPoints, aiTags } from "../../data/ai";
+import { AICard } from "./AICard";
+import { desktopGraph, mobileGraph } from "./graphData";
+import { Timeline } from "./Timeline";
 
 const firstStart = experiences
   .filter((item) => item.company !== "Colégio Lemos de Castro")
@@ -24,52 +24,33 @@ export function Experience() {
         </Reveal>
 
         <Reveal>
-          <AIHighlight />
+          <AICard.Root>
+            <AICard.Content>
+              <AICard.Intro eyebrow="IA aplicada" title="Claude Code como ferramenta de trabalho">
+                Desenvolvo com o Claude Code e uso a IA para dar velocidade ao time sem perder a
+                organização: conhecimento centralizado, sprint acompanhado e documentação que não
+                fica para depois.
+              </AICard.Intro>
+              <AICard.Points items={aiPoints} />
+              <AICard.Tags items={aiTags} />
+            </AICard.Content>
+            <AICard.Graph desktop={desktopGraph} mobile={mobileGraph} />
+          </AICard.Root>
         </Reveal>
 
-        <Timeline>
+        <Timeline.Root>
           {experiences.map((item) => (
-            <Item key={`${item.company}-${item.start}`} data-current={!item.end}>
-              <Reveal>
-                <div className="grid">
-                  <Period>
-                    <time dateTime={item.start}>{formatMonth(item.start)}</time>
-                    {" — "}
-                    {item.end ? <time dateTime={item.end}>{formatMonth(item.end)}</time> : "atual"}
-                    <span>{formatDuration(item.start, item.end)}</span>
-                  </Period>
-
-                  <Body>
-                    <header>
-                      <h3>{item.role}</h3>
-                      {!item.end && (
-                        <Current>
-                          <span aria-hidden="true" />
-                          Atual
-                        </Current>
-                      )}
-                    </header>
-                    <p className="company">
-                      <strong>{item.company}</strong> · {item.type} · {item.location}
-                    </p>
-
-                    <ul className="highlights">
-                      {item.highlights.map((highlight) => (
-                        <li key={highlight}>{highlight}</li>
-                      ))}
-                    </ul>
-
-                    <ChipList aria-label="Competências">
-                      {item.skills.map((skill) => (
-                        <Chip key={skill}>{skill}</Chip>
-                      ))}
-                    </ChipList>
-                  </Body>
-                </div>
-              </Reveal>
-            </Item>
+            <Timeline.Item key={`${item.company}-${item.start}`} current={!item.end}>
+              <Timeline.Period start={item.start} end={item.end} />
+              <Timeline.Body>
+                <Timeline.Title role={item.role} current={!item.end} />
+                <Timeline.Company company={item.company} type={item.type} location={item.location} />
+                <Timeline.Highlights items={item.highlights} />
+                <Timeline.Skills items={item.skills} />
+              </Timeline.Body>
+            </Timeline.Item>
           ))}
-        </Timeline>
+        </Timeline.Root>
       </Container>
     </Section>
   );
