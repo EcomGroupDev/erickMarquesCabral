@@ -22,10 +22,11 @@ export const experiences: Experience[] = [
       "Defino a interface e a interação visual do produto, com pesquisa visual e testes de usabilidade.",
       "Crio e mantenho o design system: componentes reutilizáveis e padrões visuais.",
       "Prototipo em alta fidelidade no Figma, com wireframes e fluxos de UX para validar as soluções.",
-      "Conduzo o handoff entre design e desenvolvimento e também desenvolvo o front-end das funcionalidades.",
+      "Desenvolvo as funcionalidades de ponta a ponta como full stack, do front-end ao back-end.",
+      "Conduzo o handoff entre design e desenvolvimento, garantindo clareza na implementação.",
       "Gerencio e priorizo o backlog do produto e planejo sprints com stakeholders e o time de desenvolvimento.",
     ],
-    skills: ["Figma", "Design system", "Front-end", "UX research", "Product backlog"],
+    skills: ["Figma", "Design system", "Full stack", "UX research", "Product backlog"],
   },
   {
     role: "Desenvolvedor web",
